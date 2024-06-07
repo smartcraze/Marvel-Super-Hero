@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+
+{% block title %}
+  Marvel
+{% endblock %}
+
+{% block content %}
+  <h1 class='bg-black  text-red-300'
+  >All super heros of marvel universe</h1>
+  <h1>this appear on the marvel page </h1>
+{% endblock %}
+
+
+{% block image %}
+<h1 class="text-3xl text-center text-red-500">Super Heros</h1>
+<div class="flex p-5">
+  
+  {% for i in heros %}
+  <div class="bg-blue-950 p-5 m-2">
+    <img src="{{ i.image.url }}" alt="{{ i.name }}">
+    <h3 class="text-center">{{ i.name }}</h3>
+    
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
+
+
+
